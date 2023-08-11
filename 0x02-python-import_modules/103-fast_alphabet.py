@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-print("{}".format("ABCDEFGHIJKLMNOPQRSTUVWXYZ"))
+if __name__ == "__main__":
+    print("{}".format("ABCDEFGHIJKLMNOPQRSTUVWXYZ"))
