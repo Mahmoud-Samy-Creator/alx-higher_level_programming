@@ -6,6 +6,7 @@ def best_score(a_dictionary):
         start = 0
         for item in a_dictionary:
             if a_dictionary[item] > start:
+                best_score = item
                 best = a_dictionary[item]
                 start = best
-        return best
+        return best_score
