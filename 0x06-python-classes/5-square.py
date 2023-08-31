@@ -29,6 +29,7 @@ class Square:
         self.__size = value
 
     def my_print(self):
+        """A function prints # according to size"""
         if self == 0:
             print("")
         else:
