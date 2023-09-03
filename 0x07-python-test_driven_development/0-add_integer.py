@@ -1,7 +1,22 @@
 #!/usr/bin/python3
-
+"""Defines a function adds 2 integers
+Attributes:
+    add_integer: function that adds two integers
+"""
+    
 def add_integer(a, b=98):
-    '''A function to add 2 numbers'''
+    """Add 2 integers or float values
+
+    Args:
+        a (int): 1st argument
+        b (int, optional): 2nd argument. Defaults to 98.
+
+    Raises:
+        TypeError: if a or b are not int or float
+
+    Returns:
+        int: a + b
+    """
     if isinstance(a, float):
         a = int(a)
 
