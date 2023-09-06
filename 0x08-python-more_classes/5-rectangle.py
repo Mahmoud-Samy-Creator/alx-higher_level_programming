@@ -4,7 +4,7 @@
 
 class Rectangle:
     """
-    Class that defines properties of rectangle by: (based on 2-rectangle.py).
+    Class that defines properties of rectangle by: (based on 4-rectangle.py).
 
     Attributes:
         width (int): width of the rectangle.
@@ -118,15 +118,11 @@ class Rectangle:
         """Returns a string representation of the rectangle.
 
         Returns:
-        str: the rectangle representation.
+            str: the rectangle representation.
         """
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
-
-def __del__(self):
-    """Destructor for Rectangle objects.
-
-    This method is called when the object is about to be destroyed.
-    You can use it to perform cleanup actions.
-    """
-    print("{:s}".format("Bye rectangle..."))
+    def __del__(self):
+        """Deletes an instance of a class
+        """
+        print("{:s}".format("Bye rectangle..."))
