@@ -20,15 +20,6 @@ class Rectangle:
         self.height = height
         self.width = width
 
-    def __str__(self):
-        """Print the size with character '#'.
-
-        Args:
-            self
-        """
-        for i in range(self.height):
-            print(self.__width * '#')
-
     @property
     def width(self):
         """Width retriver.
@@ -101,3 +92,12 @@ class Rectangle:
             return 0
         else:
             return 2 * (self.__height + self.__width)
+
+    def __str__(self):
+        """Print the size with character '#'.
+
+        Args:
+            self
+        """
+        for i in range(self.height):
+            print(self.__width * '#')
