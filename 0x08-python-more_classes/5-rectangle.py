@@ -122,11 +122,11 @@ class Rectangle:
         """
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
+
 def __del__(self):
-        """Destructor for Rectangle objects.
+    """Destructor for Rectangle objects.
 
-        This method is called when the object is about to be destroyed.
-        You can use it to perform cleanup actions.
-        """
-        print("Bye rectangle...")
-
+    This method is called when the object is about to be destroyed.
+    You can use it to perform cleanup actions.
+    """
+    print("{:s}".format("Bye rectangle..."))
