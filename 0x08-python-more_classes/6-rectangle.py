@@ -9,7 +9,6 @@ class Rectangle:
     Attributes:
         width (int): width of the rectangle.
         height (int): height of the rectangle.
-        no_of_ins (int): Number of initialized objects
     """
     no_of_int = 0
 
