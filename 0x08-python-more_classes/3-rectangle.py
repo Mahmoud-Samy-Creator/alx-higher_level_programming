@@ -4,7 +4,7 @@
 
 class Rectangle:
     """
-    Class that defines properties of rectangle by: (based on 1-rectangle.py).
+    Class that defines properties of rectangle by: (based on 2-rectangle.py).
 
     Attributes:
         width (int): width of the rectangle.
@@ -99,14 +99,17 @@ class Rectangle:
         Returns:
             str: the rectangle
         """
-        rec = []
-        if self.__height == 0 or self.__width == 0:
+        rectangle = []
+
+        if self.__width == 0 or self.__height == 0:
             return ""
 
         for i in range(self.__height):
             for j in range(self.__width):
-                rec.append('#')
-            rec.append('\n')
+                rectangle.append("#")
+            rectangle.append("\n")
 
-            rec.pop()
-            return "".join(rec)
+        # remove blank line
+        rectangle.pop()
+
+        return "".join(rectangle)
