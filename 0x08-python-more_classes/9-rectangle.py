@@ -4,12 +4,13 @@
 
 class Rectangle:
     """
-    Class that defines properties of rectangle by: (based on 4-rectangle.py).
+    Class that defines properties of rectangle by: (based on 8-rectangle.py).
 
     Attributes:
         width (int): width of the rectangle.
         height (int): height of the rectangle.
     """
+
     number_of_instances = 0
     print_symbol = "#"
 
@@ -20,9 +21,9 @@ class Rectangle:
             width (int, optional): width of rectangle. Defaults to 0.
             height (int, optional): height of rectangle. Defaults to 0.
         """
-        self.height = height
-        self.width = width
         type(self).number_of_instances += 1
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -159,6 +160,7 @@ class Rectangle:
         """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
+
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
 
@@ -167,5 +169,5 @@ class Rectangle:
 
         if area_1 >= area_2:
             return rect_1
-        return rect_2
 
+        return rect_2
