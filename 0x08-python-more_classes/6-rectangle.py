@@ -22,7 +22,7 @@ class Rectangle:
         """
         self.height = height
         self.width = width
-        Rectangle.no_of_int += 1
+        type(self).no_of_int += 1
 
     @property
     def width(self):
@@ -129,5 +129,5 @@ class Rectangle:
     def __del__(self):
         """Deletes an instance of a class
         """
-        Rectangle.no_of_int -= 1
+        type(self).no_of_int -= 1
         print("{:s}".format("Bye rectangle..."))
