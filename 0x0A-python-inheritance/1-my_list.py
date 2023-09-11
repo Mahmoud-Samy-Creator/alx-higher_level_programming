@@ -1,19 +1,14 @@
 #!/usr/bin/python3
-"""
-===========================
-Module with class MyList
-===========================
-"""
+''' Module: 1-my_list
+'''
 
 
 class MyList(list):
-    """Class with method print_sorted"""
-    pass
-
-    def __init__(self):
-        super().__init__()
+    ''' Represents a MyList
+    '''
 
     def print_sorted(self):
-        """Methot that sorted a list"""
-
+        '''
+        prints the list, but sorted
+        '''
         print(sorted(self))
