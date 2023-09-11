@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-
 """
 ===========================
-Module of class inheritance
+Module with class MyList
 ===========================
 """
 
