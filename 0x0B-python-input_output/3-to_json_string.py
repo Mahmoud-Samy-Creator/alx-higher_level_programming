@@ -12,4 +12,4 @@ def to_json_string(my_obj):
     Args:
         object: The object to be serialized
     """
-    return json.dumps(my_obj)
+    return json.dump(my_obj)
