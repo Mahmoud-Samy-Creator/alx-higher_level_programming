@@ -1,13 +1,16 @@
 #!/usr/bin/python3
 
-""" A module contains class_to_json function
+""" A module contains load_from_json_file
 """
 
+import json
 
-def class_to_json(obj):
+
+def load_from_json_file(filename):
+    """ A function to write json object to a file
+
+    Args:
+        filename (json): The file to be deserialized
     """
-    A function saves a dictionary description
-    of a class object to a json file
-    """
-    dict = vars(obj)
-    return dict
+    with open(filename, "r") as file:
+        return (json.load(file))
