@@ -25,5 +25,4 @@ class Student:
         Returns:
             dict: A dictionary containing the student's attributes.
         """
-        student_dict = vars(self)
-        return student_dict
+        return self.__dict__ 
