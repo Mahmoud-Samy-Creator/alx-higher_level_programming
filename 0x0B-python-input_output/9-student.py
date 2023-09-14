@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+9-student.py
+"""
+
 
 class Student:
     """
@@ -25,4 +29,4 @@ class Student:
         Returns:
             dict: A dictionary containing the student's attributes.
         """
-        return self.__dict__ 
+        return self.__dict__
