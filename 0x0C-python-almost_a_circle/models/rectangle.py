@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 from models.base import Base
+import json
 
 class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -110,4 +111,13 @@ class Rectangle(Base):
                 if k == "x":
                     self.x = v
                 if k == "y":
-                    self.y = v
+                        self.y = v
+
+    def to_dictionary(self):
+        return {
+            "id" : self.id,
+            "width" : self.width,
+            "height" : self.height,
+            "x" : self.x,
+            "y" : self.y
+        }
