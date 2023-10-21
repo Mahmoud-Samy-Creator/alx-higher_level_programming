@@ -2,4 +2,4 @@
 SELECT id, name
 FROM cities
 WHERE state_id = 1
-ORDERED BY cities.id;
+ORDER BY cities.id;
