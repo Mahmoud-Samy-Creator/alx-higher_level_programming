@@ -2,10 +2,9 @@
 
 // Script to print ints passed as arguments to the script.
 
-const myArg = process.argv[2];
-
-if (isNaN(Number(myArg))) {
+const arg = parseInt(process.argv[2]);
+if (!arg) {
   console.log('Not a number');
 } else {
-  console.log('My number: ' + myArg);
+  console.log(arg);
 }
