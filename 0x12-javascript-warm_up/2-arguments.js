@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-// Script that prints "JavaScript is amazing".
+// Script that checks for arguments.
 
 if (process.argv.length === 2) {
   console.log('No argument');
