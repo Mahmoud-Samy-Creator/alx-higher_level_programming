@@ -3,11 +3,11 @@
 // Script to add two integers
 
 function add (a, b) {
-  return (a + b);
+  if (isNaN(a) || isNaN(b)) {
+    console.log('NaN');
+  } else {
+    console.log(parseInt(a) + parseInt(b));
+  }
 }
 
-if (isNaN(Number(process.argv[2])) || isNaN(Number(process.argv[3]))) {
-  console.log('NaN');
-} else {
-  console.log(add(parseInt(process.argv[2]), parseInt(process.argv[3])));
-}
+add(process.argv[2], process.argv[3]);
