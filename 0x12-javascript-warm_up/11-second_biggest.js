@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-// script that finds the second biggest integer in list of arguments passed to it.
+// script that finds the second biggest integer in list of arguments passed to it
 
 if (process.argv.length < 4) {
   console.log('0');
