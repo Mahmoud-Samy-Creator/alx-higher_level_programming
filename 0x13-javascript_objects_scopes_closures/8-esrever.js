@@ -4,8 +4,8 @@
 
 exports.esrever = function (list) {
   const newList = [];
-  const lIndex = list.length - 1;
-  for (let i = lIndex, j = 0; i >= 0; i--, j++) {
+  const listLength = list.length - 1;
+  for (let i = listLength, j = 0; i >= 0; i--, j++) {
     newList[j] = list[i];
   }
   return newList;
