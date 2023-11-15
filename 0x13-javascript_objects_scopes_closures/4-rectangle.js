@@ -1,6 +1,6 @@
-#!/usr/bin/node
+#!usr/bin/node
 
-// script that creates a class.
+/* A class defines a rectangle */
 
 module.exports = class Rectangle {
   constructor (w, h) {
@@ -11,23 +11,24 @@ module.exports = class Rectangle {
   }
 
   print () {
-    let rows = 'X';
-    for (let i = 0; i < this.width - 1; i++) {
-      rows += 'X';
-    }
-    for (let j = 0; j < this.height; j++) {
-      console.log(rows);
+    if (this.width > 0 && this.height > 0) {
+      let row = '';
+      let i;
+      for (i = 0; i < this.width; i++) {
+        row = row + 'X';
+      }
+      for (i = 0; i < this.height; i++) {
+        console.log(row);
+      }
     }
   }
 
   rotate () {
-    const temp = this.width;
-    this.width = this.height;
-    this.height = temp;
+    [this.width, this.height] = [this.height, this.width];
   }
 
   double () {
-    this.width *= 2;
-    this.height *= 2;
+    this.width = this.width * 2;
+    this.height = this.height * 2;
   }
 };
