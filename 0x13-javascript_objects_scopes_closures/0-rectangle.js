@@ -1,5 +1,6 @@
 #!/usr/bin/node
-/*
-set up rectangle class
-*/
+
+/* An empty class that defines a rectangle */
+/* Using module.exports to be run from another script */
+
 module.exports = class Rectangle {};
