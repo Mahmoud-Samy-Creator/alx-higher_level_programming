@@ -16,10 +16,10 @@ if __name__ == "__main__":
     port = 3306
 
     db = MySQLdb.connect(host=host,
-                            user=user,
-                            passwd=password,
-                            db=database_name,
-                            port=port)
+                         user=user,
+                         passwd=password,
+                         db=database_name,
+                         port=port)
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states ORDER BY id")
     rows = cursor.fetchall()
