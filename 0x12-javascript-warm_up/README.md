@@ -1,7 +1,7 @@
 # 0x12. Javascript - Warm up
 
 ## Learning Objectives
-* Why Javascript programming is amazing (don’t forget to tweet today, with the hashtag #javascriptisamazing :))
+* Why Javascript programming is amazing (don’t forget to tweet today, with the hashtag #javascriptisamazing :)
 * How to run a Javascript script
 * How to create variables and constants
 * What are differences between var, const and let
