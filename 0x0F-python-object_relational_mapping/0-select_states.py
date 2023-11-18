@@ -21,7 +21,6 @@ if __name__ == "__main__":
                          db=database_name)
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states ORDERED BY id")
-
     rows = cursor.fetchall()
 
     for row in rows:
