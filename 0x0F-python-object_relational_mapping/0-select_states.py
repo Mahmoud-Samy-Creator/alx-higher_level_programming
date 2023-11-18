@@ -21,7 +21,7 @@ if __name__ == "__main__":
                             db=database_name,
                             port=port)
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states ORDERED BY id")
+    cursor.execute("SELECT * FROM states ORDER BY id")
     rows = cursor.fetchall()
 
     for row in rows:
