@@ -1,34 +1,37 @@
 #!/usr/bin/python3
 
 """
-    A script that lists all cities from the database hbtn_0e_0_usa
-    Username, password and database names are given as user args
+a script that lists all cities
+from the database hbtn_0e_4_usa
 """
-
 
 import sys
 import MySQLdb
 
+if __name__ == "__main__":
+    user = sys.argv[1]
+    password = sys.argv[2]
+    database_name = sys.argv[3]
+    host = 'localhost'
+    port = 3306
 
-if __name__ == '__main__':
-    db = MySQLdb.connect(user=sys.argv[1],
-                         passwd=sys.argv[2],
-                         db=sys.argv[3],
-                         host='localhost',
-                         port=3306)
+    db = MySQLdb.connect(user=user,
+                         passwd=password,
+                         db=database_name,
+                         host=host,
+                         port=port)
+
+    query = """SELECT cities.id, cities.name AS city_name,
+                states.name AS state_name
+                FROM cities
+                JOIN states ON cities.state_id = states.id
+                ORDER BY cities.id;"""
 
     cursor = db.cursor()
+    cursor.execute(query)
+    rows = cursor.fetchall()
 
-    sql = """SELECT c.id, c.name, s.name
-          FROM states s, cities c
-          WHERE c.state_id = s.id
-          ORDER BY c.id ASC"""
-
-    cursor.execute(sql)
-
-    data = cursor.fetchall()
-
-    for row in data:
+    for row in rows:
         print(row)
 
     cursor.close()
