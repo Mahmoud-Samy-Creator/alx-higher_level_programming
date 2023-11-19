@@ -21,11 +21,11 @@ if __name__ == "__main__":
                          host=host,
                          port=port)
 
-    query = """SELECT cities.id, cities.name AS city_name,
-                states.name AS state_name
-                FROM cities
-                JOIN states ON cities.state_id = states.id
-                ORDER BY cities.id;"""
+    query = "SELECT cities.id, cities.name, states.name\
+            FROM cities\
+            INNER JOIN states\
+            ON cities.state_id=states.id\
+            ORDER by cities.id ASC"
 
     cursor = db.cursor()
     cursor.execute(query)
