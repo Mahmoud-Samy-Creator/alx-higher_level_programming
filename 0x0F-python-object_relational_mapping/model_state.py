@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+"""
+    this module contains a Base and State class
+"""
+
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column
 from sqlalchemy import String
