@@ -1,21 +1,17 @@
 #!/usr/bin/python3
 
-"""
-    this module contains a Base and State class
-"""
-
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column
 from sqlalchemy import String
 from sqlalchemy import Integer
 
-
 Base = declarative_base()
 
 
 class State(Base):
-    """
-        State class inherits the Base class
+    """States class
+    Args:
+        Base (declarative): declarative base to inherit from
         Attributes:
             id (int)
             name (string)
