@@ -9,7 +9,7 @@ from model_state import Base
 from sqlalchemy import Column, Integer, String, ForeignKey
 
 
-class Cities(Base):
+class City(Base):
     """Cities table inhirits Base class imported
     from model_state module
 
