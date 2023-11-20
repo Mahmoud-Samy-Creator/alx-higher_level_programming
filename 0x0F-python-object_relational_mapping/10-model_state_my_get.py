@@ -16,7 +16,8 @@ from sys import argv
 if __name__ == "__main__":
     # Create engine
     engine = create_engine('mysql+mysqdb://{}:{}@localhost:3306/{}'.format(
-                            argv[1], argv[2], argv[3]))
+                            argv[1], argv[2], argv[3]),
+                            pool_pre_ping=True)
 
     # Stablishing session
     Session = sessionmaker(bind=engine)
