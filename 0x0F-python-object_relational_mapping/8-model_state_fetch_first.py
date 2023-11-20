@@ -25,9 +25,14 @@ if __name__ == "__main__":
     # Session making
     session = Session()
 
-    states = session.query(State).where(State.id == 1).all()
+    states = session.query(State).order_by(State.id).first()
 
+    # Printing state
     if states is None:
         print('Nothing')
     else:
         print(states)
+
+    # Clossing session
+    session.close
+
