@@ -13,10 +13,11 @@ from sqlalchemy import create_engine
 # Defining connection parameters
 user = argv[1]
 password = argv[2]
-database =  argv[3]
+database = argv[3]
+host = 'localhost'
 
 if __name__ == "__main__":
-    engine = create_engine(f'mysql://{user}:{password}@localhost:3306/{database}')
+    engine = create_engine(f'mysql://{user}:{password}@{host}:3306/{database}')
 
     # Establishing the connection
     Session = sessionmaker(bind=engine)
@@ -30,4 +31,3 @@ if __name__ == "__main__":
         print('Nothing')
     else:
         print(states)
-
