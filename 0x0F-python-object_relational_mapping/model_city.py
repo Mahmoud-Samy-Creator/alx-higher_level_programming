@@ -5,9 +5,8 @@
 """
 
 from sqlalchemy.ext.declarative import declarative_base
+from model_state import Base
 from sqlalchemy import ForeignKey, Column, String, Integer
-
-Base = declarative_base()
 
 
 class City(Base):
