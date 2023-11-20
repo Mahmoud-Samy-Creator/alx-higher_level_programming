@@ -27,7 +27,7 @@ if __name__ == "__main__":
     # create session
     session = Session()
 
-    # Apply query
+    # extract first state
     states = session.query(State) \
                     .filter(State.name == argv[4]).one_or_none()
 
