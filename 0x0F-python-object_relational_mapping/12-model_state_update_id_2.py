@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 """
-a script that changes
-the name of a State object from the database
+A script that changes the name of
+a State object from the database
 """
 
 # Import important modules & methods
@@ -20,7 +20,7 @@ if __name__ == "__main__":
     # Establish & create a session
     # Retrive & modify data
     Session = sessionmaker(bind=engine)
-    Base.metadata.creat_all(engine)
+    Base.metadata.create_all(engine)
     session = Session()
 
     # Query & commit
