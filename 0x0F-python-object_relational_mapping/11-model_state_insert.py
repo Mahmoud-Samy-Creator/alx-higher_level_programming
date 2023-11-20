@@ -34,6 +34,7 @@ if __name__ == "__main__":
 
     # print state.id
     state = session.query(State).filter(State.name == 'Louisiana').one()
+    print(state.id)
 
     # closing the session
     session.close()
