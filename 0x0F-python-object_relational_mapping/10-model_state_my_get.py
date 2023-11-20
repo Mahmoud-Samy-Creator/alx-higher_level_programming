@@ -31,11 +31,10 @@ if __name__ == "__main__":
     states = session.query(State) \
                     .filter(State.name == argv[4]).one_or_none()
 
-    # print state if
+    # print state.id
     if states is None:
         print("Not found")
     else:
         print(states.id)
 
-    # session closing
     session.close()
