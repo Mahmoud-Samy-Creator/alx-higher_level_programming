@@ -19,6 +19,9 @@ if __name__ == "__main__":
     # Establishing the connection
     Session = sessionmaker(bind=engine)
 
+    # Create and update table
+    Base.metadata.create_all(engine)
+
     # Session making
     session = Session()
 
