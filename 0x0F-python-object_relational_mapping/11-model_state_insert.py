@@ -20,22 +20,20 @@ if __name__ == "__main__":
 
     # Create engine
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
-                            argv[1], argv[2], argv[3]))
+                           argv[1], argv[2], argv[3]))
 
     # Establish session
     Session = sessionmaker(bind=engine)
 
-    # Create data
-    Base.metadata.create(engine)
-
     # Create session
     session = Session()
 
-    # Add created object
+    # Add created object and commit
     session.add(Louisiana)
+    session.commit()
 
-    # print all data
-    states = session.query(State).order_by(State.id).all()
+    # print state.id
+    state = session.query(State).filter(State.name == 'Louisiana').one()
 
-    for state in states:
-        print('{}: {}'.format(state.name, state.id))
+    # closing the session
+    session.close()
