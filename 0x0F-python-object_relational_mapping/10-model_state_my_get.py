@@ -31,7 +31,7 @@ if __name__ == '__main__':
 
     # extract first state
     states = session.query(State) \
-                    .filter(State.name == argv[4]).one_or_none()
+                .filter(State.name == argv[4]).one_or_none()
 
     # print state.id
     if states is None:
