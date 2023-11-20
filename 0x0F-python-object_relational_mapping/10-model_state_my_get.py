@@ -33,7 +33,7 @@ if __name__ == "__main__":
 
     # print state if
     if states is None:
-        print("Not founf")
+        print("Not found")
     else:
         print(states.id)
 
