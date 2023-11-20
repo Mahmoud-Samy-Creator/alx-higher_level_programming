@@ -25,13 +25,14 @@ if __name__ == "__main__":
     # Session making
     session = Session()
 
+    # Extract output
     states = session.query(State).order_by(State.id).first()
 
     # Printing state
     if states is None:
         print('Nothing')
     else:
-        print(states)
+        print("{}: {}".format(states.id, states.name))
 
     # Clossing session
     session.close
