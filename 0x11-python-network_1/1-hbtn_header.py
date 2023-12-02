@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-# Send request to url, display value of header
-
+"""Takes in URL, sends request, displays value of X-Request-Id found in header
+"""
 if __name__ == "__main__":
-    import urllib.request
+    from urllib import request
     from sys import argv
 
-    url = argv[1]
-
-    with urllib.request.urlopen(url) as response:
-        print(response.info().get("X-Request-Id"))
+    with request.urlopen(argv[1]) as f:
+        print(f.info().get("X-Request-Id"))
