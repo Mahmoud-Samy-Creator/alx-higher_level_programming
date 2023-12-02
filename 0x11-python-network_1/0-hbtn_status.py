@@ -3,6 +3,7 @@
 
 import urllib.request
 
+# URL to be fetched
 url = 'https://alx-intranet.hbtn.io/status'
 
 req = urllib.request.Request(url)
