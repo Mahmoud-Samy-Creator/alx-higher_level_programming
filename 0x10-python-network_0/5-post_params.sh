@@ -1,3 +1,3 @@
 #!/bin/bash
 # Send GET, Display body, Send a variable
-curl -sX POST -d "email=test@gmail.com&subject=I will always be here for PLD"
+curl -sX POST -d "email=test@gmail.com&subject=I will always be here for PLD" "$1"
