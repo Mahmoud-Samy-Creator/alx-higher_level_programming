@@ -6,8 +6,6 @@ if __name__ == "__main__":
     from sys import argv
 
     url = argv[1]
-    req = urllib.request.Request(url)
 
-    with urllib.request.urlopen(req) as response:
+    with urllib.request.urlopen(url) as response:
         print(response.info().get("X-Request-Id"))
-
