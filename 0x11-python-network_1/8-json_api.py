@@ -1,29 +1,20 @@
 #!/usr/bin/python3
+"""Takes a letter and sends POST request to http://0.0.0.0:5000/search_user
+with letter as parameter
 """
-A Python script that takes in a letter
-and sends a POST request to
-http://0.0.0.0:5000/search_user with the letter
-as a parameter.
-"""
-
 if __name__ == "__main__":
     import requests
     from sys import argv
-
-    url = "http://0.0.0.0:5000/search_user"
 
     if len(argv) == 1:
         data = {"q": ""}
     else:
         data = {"q": argv[1]}
 
-    req = requests.post(url, data)
-
-    if req.headers.get("content-type") != "application/json":
+    r = requests.post("http://0.0.0.0:5000/search_user", data=data)
+    if r.headers.get("content-type") != "application/json":
         print("Not a valid JSON")
-
-    elif req.json == "":
+    elif r.json() == {}:
         print("No result")
-
     else:
-        print("[{}] {}".format(req.json()["id"], req.json()["name"]))
+        print("[{}] {}".format(r.json()["id"], r.json()["name"]))
