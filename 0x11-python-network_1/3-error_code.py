@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     # Reciving response
     try:
-        with request.Request(url) as responce:
+        with request.urlopen(url) as responce:
             print(responce.read().decode("utf-8"))
     except error.HTTPError as e:
         print(f"Error code: {e.code}")
