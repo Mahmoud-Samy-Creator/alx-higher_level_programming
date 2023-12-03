@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     code = status.status_code
 
-    if status >= 400:
+    if code >= 400:
         print(f"Error code: {code}")
     else:
         print(status.text)
