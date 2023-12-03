@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-# Fetches url using requests module
-
+"""Fetches https://intranet.hbtn.io/status using requests package"""
 if __name__ == "__main__":
     import requests
 
-    req = requests.get("https://alx-intranet.hbtn.io/status")
-
-    print("Body response:")
-    print(f"\t- type: {type(req.text)}")
-    print(f"\t- content: {req.text}")
+    r = requests.get("https://alx-intranet.hbtn.io/status")
+    print("Body response:\n"
+          "\t- type: {}\n"
+          "\t- content: {}".format(type(r.text), r.text))
