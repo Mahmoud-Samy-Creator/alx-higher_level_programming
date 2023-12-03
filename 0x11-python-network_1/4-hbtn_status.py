@@ -8,4 +8,4 @@ if __name__ == "__main__":
 
     print("Body response:")
     print(f"\t- type: {type(req.text)}")
-    print(f"\t -content: {req.text}")
+    print(f"\t- content: {req.text}")
