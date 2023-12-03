@@ -12,4 +12,4 @@ from sys import argv
 if __name__ == "__main__":
     req = requests.get(f"{argv[1]}")
 
-    print(f"{req.headers['X-Request-Id']}")
+    print(req.headers.get("X-Request-Id"))
