@@ -26,5 +26,4 @@ if __name__ == "__main__":
     # Reciving response
     with request.urlopen(req) as response:
         result = response.read()
-
     print(result.decode("utf-8"))
