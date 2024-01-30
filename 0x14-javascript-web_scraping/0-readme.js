@@ -1,7 +1,6 @@
 #!/usr/bin/node
-
-
-/* Reads & prints file contents */
+/**
+ * Reads and prints contents of a file */
 
 
 /* Step [1]
@@ -10,11 +9,10 @@ using file system module bult-in in javascript
 */
 const fs = require('fs');
 
-
-/* Step [2]
-If an error occurred during the reading, print the error object
-*/
+/**
+* Use readFile method to write to a file
+ */
 fs.readFile(process.argv[2], 'utf8', function (err, data) {
-	if (err) throw err;
-	console.log(err);
+	if (err) console.log(err);
+	else process.stdout.write(data);
 });
