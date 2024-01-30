@@ -14,7 +14,7 @@ const fs = require('fs');
 /* Step [2]
 If an error occurred during the reading, print the error object
 */
-fs.readFile(process.argv[2], 'utf-8', function (err, data) {
+fs.readFile(process.argv[2], 'utf8', function (err, data) {
 	if (err) throw err;
 	console.log(err);
 });
