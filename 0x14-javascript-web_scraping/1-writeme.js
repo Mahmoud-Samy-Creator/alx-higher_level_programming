@@ -12,10 +12,10 @@ using file system module bult-in in javascript
 */
 const fs = require('fs');
 
-
 /*
 Use writeFile method to write to a file
  */
 fs.writeFile(process.argv[2], process.argv[3], (err) => {
 	if (err) console.log(err);
 });
+
