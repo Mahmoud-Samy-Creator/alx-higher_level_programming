@@ -4,6 +4,12 @@
  * First arg is file path
  * Second arg is string
  */
+
+
+/* Step [1]
+Creating fs [file system ] object to interact with a file
+using file system module bult-in in javascript
+*/
 const fs = require('fs');
 
 fs.writeFile(process.argv[2], process.argv[3], (err) => {
